@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -80,8 +81,9 @@ public class spi extends AppCompatActivity {
                     }
                     double a4=Math.pow(a2,3);
                     double a5=(fac)/(a4+a3);
-                    String st4=Double.toString(a5);
-                    textView10.setText("Custom Spi Factor Value = "+st4);
+                    DecimalFormat dc1=new DecimalFormat("#############.###############");
+                    String str10=dc1.format(a5);
+                    textView10.setText("Custom Spi Factor Value = "+str10);
 
                 }
 
@@ -111,9 +113,10 @@ public class spi extends AppCompatActivity {
             }
             double a10=Math.pow(a8,3);
             double a11=(fac1)/(a10+a9);
-            String st6=Double.toString(a11);
+            DecimalFormat dc=new DecimalFormat("#############.###############");
+            String str9=dc.format(a11);
             textview16.setText("Current Time = "+time);
-            textview17.setText("Current Spi Factor Value = "+st6);
+            textview17.setText("Current Spi Factor Value = "+str9);
             refresh(1000);
     }
     public void refresh(int milliseconds)
