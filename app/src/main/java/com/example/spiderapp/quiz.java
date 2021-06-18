@@ -2,6 +2,7 @@ package com.example.spiderapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
@@ -26,6 +27,7 @@ public class quiz extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         button=findViewById(R.id.button6);
